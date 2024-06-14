@@ -1,4 +1,5 @@
 // Component
+// Test
 import SectionWrapper from "../SectionWrapper";
 
 const About = () => {
