@@ -13,7 +13,8 @@ export default function Home() {
         <About />
       </div>
       <div>
-        <JourneySection />
+        hi
+        {/* <JourneySection /> */}
       </div>
     </main>
   );
