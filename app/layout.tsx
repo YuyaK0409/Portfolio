@@ -26,11 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} min-w-screen min-h-screen`}>
-        <Header />
+        {/* <Header />
         <ReactParallaxProvider>
           <main className="flex flex-col items-center">{children}</main>
         </ReactParallaxProvider>
-        <Footer />
+        <Footer /> */}
+        ko
       </body>
     </html>
   );
