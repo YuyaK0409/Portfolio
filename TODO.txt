@@ -1,0 +1,28 @@
++TODO
+    Home
+      Set proper resume in public folder
+      Set the avator img
+      Set some img both side of avotor between size md to lg
+      Add href for SNS link
+
+    Journey
+      Set proper info for education and experience
+    
+    About
+      image?
+        check:https://youtu.be/sQoiM7i5Nqc?si=UnBSR6tOCOVaqgbZ
+      descrive myself a bit
+      show skil set 
+
+    Fix the page position when reload
+
++free image
+ -Unsplash
+ -Pixabay
+
+
+
++Not necessary
+ -Mode function
+ -Lang function
+ -Set icon aftere こんにちは ?
