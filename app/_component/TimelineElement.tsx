@@ -1,14 +1,15 @@
 import { IconType } from "react-icons";
 import { motion } from "framer-motion";
-import { Span } from "next/dist/trace";
 
 // Type
+import { JourneyElementType } from "@/type/journey.types";
 type Props = {
   odd?: boolean;
   Icon: IconType;
   type: "experience" | "education";
+  element: JourneyElementType;
 };
-const TimelineElement = ({ odd, Icon, type }: Props) => {
+const TimelineElement = ({ odd, Icon, type, element }: Props) => {
   return (
     <div
       className={`relative py-10 w-full max-w-[600px]
@@ -45,7 +46,7 @@ const TimelineElement = ({ odd, Icon, type }: Props) => {
           <Icon />
         </span>
 
-        <small>2024-04-04</small>
+        <small>{`${element.start}～${element.end}`}</small>
       </motion.p>
       <motion.div
         initial={{ opacity: 0, translateX: odd ? 200 : -200 }}
@@ -55,20 +56,21 @@ const TimelineElement = ({ odd, Icon, type }: Props) => {
           type === "education" ? "border-main-color" : "border-blue-300"
         }`}
       >
-        <p className="break-normal">
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd fddddddd
-          fddddddd fddddddd fddddddd fddddddd fddddddd{" "}
-        </p>
+        <h2 className="text-xl">{element.title}</h2>
+        <p className="break-normal text-[12px] mt-3">{element.des}</p>
+        {element.skills && (
+          <p className="mt-3 text-[12px]">
+            技術：
+            {element.skills.map((skill, index) => {
+              return (
+                <span key={index} className="mr-2 text-red-300">
+                  {skill}
+                  {index !== element.skills.length - 1 ? "," : ""}
+                </span>
+              );
+            })}
+          </p>
+        )}
       </motion.div>
     </div>
   );

@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 
 // Provider
 import ReactParallaxProvider from "@/provider/ReactParallaxProvider";
+import LevaProvider from "@/provider/LevaProvider";
 
 // CSS
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,8 +18,8 @@ export const metadata: Metadata = {
 };
 
 // Component
-import Header from "./_component/header/Header";
-import Footer from "./_component/footer/Footer";
+import HeaderSection from "./_component/header/HeaderSection";
+import FooterSection from "./_component/footer/FooterSection";
 
 export default function RootLayout({
   children,
@@ -26,11 +29,24 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} min-w-screen min-h-screen`}>
-        <Header />
+        <LevaProvider />
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        <HeaderSection />
         <ReactParallaxProvider>
           <main className="flex flex-col items-center">{children}</main>
         </ReactParallaxProvider>
-        <Footer />
+        <FooterSection />
       </body>
     </html>
   );

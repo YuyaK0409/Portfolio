@@ -10,7 +10,7 @@ type Props = {
 
 const CustomLink = ({ hash, label, style }: Props) => {
   return (
-    <Scroll to={hash} spy={true} offset={-65} className={style && style}>
+    <Scroll to={hash} spy={true} offset={-100} className={style && style}>
       {label}
     </Scroll>
   );

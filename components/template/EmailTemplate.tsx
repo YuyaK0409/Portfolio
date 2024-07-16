@@ -1,10 +1,18 @@
+// Template for email which is sent from contact form
 type Props = {
-  firstName: string;
+  email: string;
+  subject: string;
+  message: string;
 };
 
-const EmailTemplate = ({ firstName }: Props) => (
+const EmailTemplate = ({ email, subject, message }: Props) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
+    <p>メールアドレス: {email}</p>
+    <p>件名: {subject}</p>
+    <p>
+      メッセージ: <br />
+      {message}
+    </p>
   </div>
 );
 
