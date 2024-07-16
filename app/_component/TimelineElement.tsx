@@ -58,13 +58,14 @@ const TimelineElement = ({ odd, Icon, type, element }: Props) => {
       >
         <h2 className="text-xl">{element.title}</h2>
         <p className="break-normal text-[12px] mt-3">{element.des}</p>
-        {element.skills && (
+        {element.skills && element.skills.length > 0 && (
           <p className="mt-3 text-[12px]">
             技術：
             {element.skills.map((skill, index) => {
               return (
                 <span key={index} className="mr-2 text-red-300">
                   {skill}
+                  {/* @ts-ignore */}
                   {index !== element.skills.length - 1 ? "," : ""}
                 </span>
               );
