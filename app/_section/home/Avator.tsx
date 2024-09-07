@@ -1,20 +1,29 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+// Const
+import { animateionDelay, animateionDuration } from "@/app/const";
+
+// Image
+import profileImg from "@/public/profileImg.png";
+
 const Avator = () => {
   return (
     <div className="w-full flex justify-center py-5 items-center lg:w-1/2">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.3, duration: 0.3 }}
+        viewport={{ once: true }}
+        transition={{ delay: animateionDelay, duration: animateionDuration }}
         className="
-        relative aspect-square w-4/5 max-w-[350px] flex justify-center items-center duration-300 delay-150 
+        relative aspect-square w-4/5 max-w-[350px] flex justify-center items-center
         lg:w-full lg:max-w-[450px] lg:mr-10
-        after:w-full after:h-full after:absolute after:top-0 after:left-0 after:rounded-full after:duration-300 after:delay-300 after:border-[1px] after:border-main-color
-        hover:after:shadow-avator
+        rounded-full duration-300 border-[1px] border-main-color overflow-hidden
+        hover:shadow-avator
       "
       >
-        Avator
+        <Image src={profileImg} alt="profile" fill className="object-cover" />
       </motion.div>
     </div>
   );

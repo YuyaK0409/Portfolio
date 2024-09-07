@@ -25,10 +25,10 @@ const AboutSection = () => {
             <ThreeDCube />
           </Suspense>
         </div>
-        <div className="flex-1 flex flex-col justify-between">
+        <div className="flex-1 flex flex-col">
           <About />
-          <div className="py-5">
-            <ul className="flex gap-10 justify-center mt-10 mb-5">
+          <div className="pt-10 pb-10">
+            <ul className="flex gap-10 justify-center">
               <li
                 className={`text-[13px] p-2 border border-main-color rounded-full duration-300 ${
                   category === SkillSetCategory.FRONTEND
@@ -37,7 +37,7 @@ const AboutSection = () => {
                 }`}
                 onClick={() => setCategory(SkillSetCategory.FRONTEND)}
               >
-                フロントエンド
+                フロント
               </li>
               <li
                 className={`text-[13px] p-2 border border-main-color rounded-full duration-300 ${
@@ -47,7 +47,7 @@ const AboutSection = () => {
                 }`}
                 onClick={() => setCategory(SkillSetCategory.BACKEND)}
               >
-                バックエンド
+                バック
               </li>
               <li
                 className={`text-[13px] p-2 border border-main-color rounded-full duration-300 ${

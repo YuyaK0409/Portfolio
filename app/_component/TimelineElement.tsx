@@ -1,6 +1,9 @@
 import { IconType } from "react-icons";
 import { motion } from "framer-motion";
 
+// Const
+import { animateionDelay, animateionDuration } from "../const";
+
 // Type
 import { JourneyElementType } from "@/type/journey.types";
 type Props = {
@@ -21,7 +24,8 @@ const TimelineElement = ({ odd, Icon, type, element }: Props) => {
       <motion.p
         initial={{ height: 0 }}
         whileInView={{ height: "100%" }}
-        transition={{ duration: 0.3, delay: 0.3 }}
+        transition={{ delay: animateionDelay, duration: animateionDuration }}
+        viewport={{ once: true }}
         className={`w-[4px] h-full absolute top-0 ${
           odd ? "left-0" : "left-0 md:left-full"
         } ${type === "education" ? "bg-main-color" : "bg-blue-300"}
@@ -30,7 +34,8 @@ const TimelineElement = ({ odd, Icon, type, element }: Props) => {
       <motion.p
         initial={{ transform: "Scale(0)" }}
         whileInView={{ transform: "Scale(1)" }}
-        transition={{ duration: 0.3, delay: 0.1 }}
+        transition={{ delay: animateionDelay, duration: animateionDuration }}
+        viewport={{ once: true }}
         className={`absolute flex  gap-3 items-center top-[-10px] ${
           odd
             ? "left-[-11px]"
@@ -51,7 +56,8 @@ const TimelineElement = ({ odd, Icon, type, element }: Props) => {
       <motion.div
         initial={{ opacity: 0, translateX: odd ? 200 : -200 }}
         whileInView={{ opacity: 1, translateX: 0 }}
-        transition={{ duration: 0.3, delay: 0.3 }}
+        transition={{ delay: animateionDelay, duration: animateionDuration }}
+        viewport={{ once: true }}
         className={`p-2 border-[1px] ${
           type === "education" ? "border-main-color" : "border-blue-300"
         }`}

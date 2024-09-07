@@ -9,7 +9,7 @@ type Props = {
 
 const SkillCard = ({ className, alt, label, html }: Props) => {
   return (
-    <div className="relative my-5 w-[100px] h-[100px]">
+    <div className="relative my-5 w-[100px] h-[100px] flex justify-center items-center">
       <Image className={className} src={html} fill alt={alt} />
       <span className="absolute w-full top-full left-0 text-center">
         {label}

@@ -102,6 +102,10 @@ const config = {
       padding: {
         side: "0px 10px",
       },
+      gridTemplateColumns: {
+        "auto-fit": "repeat(auto-fit, minmax(100px, 1fr))",
+        "auto-fill": "repeat(auto-fill, minmax(100px, 1fr))",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,6 +1,10 @@
 // Util
 import { motion } from "framer-motion";
 
+// Const
+import { animateionDuration, animateionDelay } from "../const";
+
+// Type
 type Props = {
   objKey: string;
   label: string;
@@ -16,7 +20,8 @@ const ContactFormElement = ({ objKey, label, errors, children }: Props) => {
         <motion.span
           initial={{ opacity: 0.5 }}
           whileInView={{ width: 0 }}
-          transition={{ delay: 0.3, duration: 0.3 }}
+          viewport={{ once: true }}
+          transition={{ delay: animateionDelay, duration: animateionDuration }}
           className="absolute top-0 left-0 bg-red-100 w-full h-full"
         ></motion.span>
         {children}

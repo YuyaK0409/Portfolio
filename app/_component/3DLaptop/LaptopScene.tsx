@@ -18,7 +18,12 @@ const LaptopScene = () => {
 
       <PresentationControls global enabled={false}>
         <Stage environment={"city"} intensity={0.1}>
-          <primitive object={laptop.scene} scale={0.8} rotation={[1, 0.5, 0]} />
+          <primitive
+            object={laptop.scene}
+            scale={0.8}
+            rotation={[1.3, 0.7, 0.2]}
+            position={[0, 2, 0]}
+          />
         </Stage>
       </PresentationControls>
 

@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 
 // Component
 import HeaderSection from "./_component/header/HeaderSection";
-import FooterSection from "./_component/footer/FooterSection";
 
 export default function RootLayout({
   children,
@@ -46,7 +45,6 @@ export default function RootLayout({
         <ReactParallaxProvider>
           <main className="flex flex-col items-center">{children}</main>
         </ReactParallaxProvider>
-        <FooterSection />
       </body>
     </html>
   );

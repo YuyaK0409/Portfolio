@@ -3,21 +3,21 @@
 import { Button } from "@/components/ui/button";
 import { Link as Scroll } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
-// Icons
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
+// Const
+import { animateionDelay, animateionDuration } from "@/app/const";
 
 const Greeting = () => {
   return (
-    <div className="flex flex-col gap-5 w-4/5 lg:w-1/2 lg:ml-10">
-      <motion.div
-        initial={{ opacity: 0, translateX: -200 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
-        transition={{ delay: 0.3, duration: 0.3 }}
-      >
+    <motion.div
+      className="flex flex-col gap-5 w-4/5 lg:w-1/2 lg:ml-10"
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: animateionDelay, duration: animateionDuration }}
+    >
+      <div>
         <h2 className="text-3xl font-bold flex flex-col sm:block">
           <span>こんにちは、</span>
 
@@ -31,32 +31,24 @@ const Greeting = () => {
           <TypeAnimation
             sequence={[
               "システムエンジニア",
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              2000, // wait 1s before replacing "Mice" with "Hamsters"
               "プログラマー",
-              1000,
+              2000,
             ]}
             wrapper="span"
-            speed={10}
+            speed={1}
             style={{ display: "inline-block" }}
             repeat={Infinity}
           />
         </p>
-      </motion.div>
-      <motion.p
-        initial={{ opacity: 0, translateX: 200 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
-        transition={{ delay: 0.3, duration: 0.3 }}
-      >
-        大阪在住のプログラマです。 SESとして様々な案件に参画する機会があり、
-        色々なスキルを身に着けることができました。
-        主に得意な分野はフロントエンドです ...
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0, translateY: 50 }}
-        whileInView={{ opacity: 1, translateY: 0 }}
-        transition={{ delay: 0.3, duration: 0.3 }}
-        className="flex flex-col gap-5 sm:flex-row sm:items-center"
-      >
+      </div>
+      <p>
+        大阪在住のSEです。 様々な案件に参画する機会があり、
+        設計書作成、開発、保守、監視などの業務を担当し、
+        色々なスキルを身に着けることが出来ました。 主な言語・FWは
+        JavaScript、React、Laravel、Javaです。
+      </p>
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
         <div className="flex gap-5">
           <Button
             asChild
@@ -76,12 +68,13 @@ const Greeting = () => {
             className="relative bg-transparent text-main-color before:duration-300 before:delay-150 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:-z-10 before:border-2 before:border-main-color before:blur-text hover:bg-transparent hover:before:h-0 hover:before:top-full"
           >
             <a href="/resume.pdf" download={true}>
-              履歴書
+              履歴書をダウンロード
             </a>
           </Button>
         </div>
 
-        <div className="flex gap-5 h-auto">
+        {/* オーストラリアの仕事を探す場合は、少なくともLinkedIn は必要 */}
+        {/* <div className="flex gap-5 h-auto">
           <Link
             href={"/"}
             className="relative p-3 text-main-color flex justify-center items-center text-[13px] duration-300 delay-150 hover:text-background before:rounded-full before:border-[1px] before:border-main-color before:w-full before:h-full before:absolute before:top-0 before:left-0 before:blur-text before:-z-10 before:duration-300 before:delay-150 hover:before:scale-125 hover:before:bg-main-color"
@@ -94,9 +87,9 @@ const Greeting = () => {
           >
             <FaInstagram />
           </Link>
-        </div>
-      </motion.div>
-    </div>
+        </div> */}
+      </div>
+    </motion.div>
   );
 };
 
