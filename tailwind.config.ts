@@ -88,6 +88,7 @@ const config = {
       },
       boxShadow: {
         avator: `0 3px 20px var(--main-color), 0 -3px 20px var(--main-color), 3px 0 20px blue, -3px 0 20px var(--main-color)`,
+        about: `0 3px 5px var(--main-color), 0 -3px 5px var(--main-color), 3px 0 5px blue, -3px 0 5px var(--main-color)`,
       },
       height: {
         "content-space": "var(--content-space)",

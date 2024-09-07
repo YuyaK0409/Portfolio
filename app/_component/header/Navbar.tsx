@@ -9,7 +9,7 @@ import { menu } from "@/const/menu";
 import { AlignJustify } from "lucide-react";
 
 // Component
-import CustomLink from "../CustomLink";
+import CustomLink from "@/app/_component/CustomLink";
 import ToggleMenu from "./ToggleMenu";
 
 const Navbar = () => {

@@ -2,7 +2,7 @@
 import { menu } from "@/const/menu";
 
 // Component
-import CustomLink from "../CustomLink";
+import CustomLink from "@/app/_component/CustomLink";
 
 // Tyoe
 type Props = {

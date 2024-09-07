@@ -8,13 +8,18 @@
     Journey
       Set proper info for education and experience
     
-    About
-      image?
-        check:https://youtu.be/sQoiM7i5Nqc?si=UnBSR6tOCOVaqgbZ
-      descrive myself a bit
-      show skil set 
+    Skills
+      idea         
+       1 3D cube
+       2 use this animation:  https://youtu.be/qp0-L_M3Ad4?si=hc7ayEUPejPvH0_h
+    
+    Contact
+      Store email to DB to check how many times sender sent message before
 
-    Fix the page position when reload
+
+    Go top button?
+    Change animation
+    change color
 
 +free image
  -Unsplash
@@ -26,3 +31,30 @@
  -Mode function
  -Lang function
  -Set icon aftere こんにちは ?
+
+
+!! Config !! 
+-Rental Server & Domain
+ 
+ Purchased from https://www.onamae.com/
+ Admin page
+  https://navi.onamae.com/top
+  https://cp.onamae.ne.jp/
+
+
+!! How to set up Resend !!
+Check this Youtube video
+He explain all the step
+ https://youtu.be/D-NVNPuzFtU?si=jnpNeZyvvL-1iIU1
+
+
+shift G
+  simillar face angle
+
+ctr E 
+  mark seam
+
+L 
+
+shift G simillar normal
+
