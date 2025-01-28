@@ -20,9 +20,9 @@ export default function Home() {
       <div id="experience" className="pt-20 pb-10">
         <ExperienceSection />
       </div>
-      <div id="contact" className="pt-20 pb-10">
+      {/* <div id="contact" className="pt-20 pb-10">
         <ContactSection />
-      </div>
+      </div> */}
     </main>
   );
 }
