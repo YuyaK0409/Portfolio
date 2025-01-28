@@ -4,5 +4,5 @@ export const menu = [
   { hash: "about", label: "自己紹介" },
   { hash: "education", label: "学歴" },
   { hash: "experience", label: "経歴" },
-  { hash: "contact", label: "問い合わせ" },
+  // { hash: "contact", label: "問い合わせ" },
 ];
